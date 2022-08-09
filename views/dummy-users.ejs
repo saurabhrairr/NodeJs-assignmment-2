@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-color: rgb(170, 88, 88);
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                border-style: double;
+            }
+            td, th {
+                border-style: double;
+                text-align: left;
+                padding: 10px 20px 30px 40px;
+            }
+            h1{
+                display: flex;
+               justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Dummy Users</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Profession</th>
+                </tr>
+                <% for(let i=0;i<users.length;i++) {%>
+                    <tr>
+                        <td><%= users[i].fullname%></td>
+                        <td><%= users[i].email%></td>
+                        <td><%= users[i].age%></td>
+                        <td><%= users[i].city%></td>
+                        <td><%= users[i].profession%></td>
+                    </tr>
+                <% } %>
+            </table>
+            <a href="/form">Add User</a>
+        </div>
+    </body>
+</html>
